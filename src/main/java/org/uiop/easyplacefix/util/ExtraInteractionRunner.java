@@ -50,7 +50,7 @@ public final class ExtraInteractionRunner {
                 }
 
                 interactionManager.useItemOn(mc.player, usedHand, hitResult);
-                mc.player.swing(usedHand);
+                mc.player.swing(usedHand, net.minecraft.world.item.component.SwingAnimation.DEFAULT, false);
             }));
         }
     }

@@ -5,7 +5,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Tuple;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.RedStoneWireBlock;
+import net.minecraft.world.level.block.RedstoneWireBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.RedstoneSide;
@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.uiop.easyplacefix.IBlock;
 import org.uiop.easyplacefix.data.RelativeBlockHitResult;
 
-@Mixin(RedStoneWireBlock.class)
+@Mixin(RedstoneWireBlock.class)
 public abstract class MixinRedstoneWireBlock implements IBlock {
     @Shadow
     protected abstract boolean canSurvive(BlockState state, LevelReader world, BlockPos pos);

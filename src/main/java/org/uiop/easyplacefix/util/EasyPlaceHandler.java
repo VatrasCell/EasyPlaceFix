@@ -348,7 +348,7 @@ public class EasyPlaceHandler {
                                                 usedHand,
                                                 offsetBlockHitResult
                                         );
-                                        mc.player.swing(usedHand);
+                                        mc.player.swing(usedHand, net.minecraft.world.item.component.SwingAnimation.DEFAULT, false);
                                         ExtraInteractionRunner.run(
                                                 mc,
                                                 interactionManager,
@@ -417,7 +417,7 @@ public class EasyPlaceHandler {
                                                 usedHand,
                                                 offsetBlockHitResult
                                         );
-                                        mc.player.swing(usedHand);
+                                        mc.player.swing(usedHand, net.minecraft.world.item.component.SwingAnimation.DEFAULT, false);
                                         ExtraInteractionRunner.run(
                                                 mc,
                                                 interactionManager,

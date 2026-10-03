@@ -85,7 +85,7 @@ public final class TerrainAutoReplace {
         }
 
         mc.gameMode.continueDestroyBlock(pos, direction);
-        mc.player.swing(InteractionHand.MAIN_HAND);
+        mc.player.swing(InteractionHand.MAIN_HAND, net.minecraft.world.item.component.SwingAnimation.DEFAULT, false);
         TickThread.addCountDownTask(new RunnableWithCountDown.Builder()
                 .setCount(1)
                 .build(() -> step(mc, traceWrapper, pos, direction, ticksLeft - 1)));

@@ -11,6 +11,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.level.block.SignBlock;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.entity.SignText;
+import net.minecraft.world.level.block.entity.SignTextSlot;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import org.spongepowered.asm.mixin.Mixin;
@@ -35,24 +36,15 @@ public class MixinAbstractSignBlock implements IBlock {
             );
             return;
         }
-        SignText backText = blockEntity.getBackText();
-        SignText frontText = blockEntity.getFrontText();
+        SignText backText = blockEntity.getText(SignTextSlot.BACK);
+        SignText frontText = blockEntity.getText(SignTextSlot.FRONT);
 
         clientPlayNetworkHandler.send(
-                new ServerboundSignUpdatePacket(
-                        blockHitResult.getBlockPos(),
-                        true,
-                        frontText.getMessage(0, false).getString(),
-                        frontText.getMessage(1, false).getString(),
-                        frontText.getMessage(2, false).getString(),
-                        frontText.getMessage(3, false).getString()
-
-
-                )
+                new ServerboundSignUpdatePacket(blockHitResult.getBlockPos(), java.util.List.of(frontText.getMessages(false).get(0).getString(), frontText.getMessages(false).get(1).getString(), frontText.getMessages(false).get(2).getString(), frontText.getMessages(false).get(3).getString()), SignTextSlot.FRONT)
         );
 
-        for (int i = 0; i < backText.getMessages(false).length; i++) {
-            if (!backText.getMessage(i, false).getString().isEmpty()) {
+        for (int i = 0; i < backText.getMessages(false).size(); i++) {
+            if (!backText.getMessages(false).get(i).getString().isEmpty()) {
                 clientPlayNetworkHandler.send(new ServerboundUseItemOnPacket(
                         InteractionHand.MAIN_HAND,
                         blockHitResult,
@@ -61,16 +53,7 @@ public class MixinAbstractSignBlock implements IBlock {
                 ));
 
                 clientPlayNetworkHandler.send(
-                        new ServerboundSignUpdatePacket(
-                                blockHitResult.getBlockPos(),
-                                false,
-                                backText.getMessage(0, false).getString(),
-                                backText.getMessage(1, false).getString(),
-                                backText.getMessage(2, false).getString(),
-                                backText.getMessage(3, false).getString()
-
-
-                        )
+                        new ServerboundSignUpdatePacket(blockHitResult.getBlockPos(), java.util.List.of(backText.getMessages(false).get(0).getString(), backText.getMessages(false).get(1).getString(), backText.getMessages(false).get(2).getString(), backText.getMessages(false).get(3).getString()), SignTextSlot.BACK)
                 );
 
 

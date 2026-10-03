@@ -14,8 +14,7 @@ jobs:
       fail-fast: false
       matrix:
         minecraft-version:
-          - "26.1.2"
-          - "26.2"
+          - "26.3"
 
     name: Build for Minecraft ${{ matrix.minecraft-version }}
 

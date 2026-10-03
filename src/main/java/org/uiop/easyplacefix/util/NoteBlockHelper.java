@@ -122,7 +122,7 @@ public final class NoteBlockHelper {
                         false
                 );
                 mc.gameMode.useItemOn(mc.player, InteractionHand.MAIN_HAND, hitResult);
-                mc.player.swing(InteractionHand.MAIN_HAND);
+                mc.player.swing(InteractionHand.MAIN_HAND, net.minecraft.world.item.component.SwingAnimation.DEFAULT, false);
 
                 QUEUE.addLast(pos); // still needs more clicks; back of the line
                 break;              // exactly one interaction per pump
