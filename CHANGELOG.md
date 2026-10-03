@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.7
+
+- Ported to Minecraft 26.3 (Fabric API 0.161.0, Litematica 0.29.1, MaLiLib 0.30.2).
+- Adapted to 26.3 API changes: `LivingEntity.swing(hand, SwingAnimation, boolean)`, `SignTextSlot`-based sign text/update packet, `RedstoneWireBlock` rename.
+- Dropped support for 26.1.2 and 26.2 (binary-incompatible with these API changes).
+
 ## 0.6.6
 
 - New optional **Auto tool switch** (`autoToolSwitch`, OFF by default). While Litematica Easy Place is active, the mod selects the fastest suitable tool from the player's inventory before mining begins. Creative mode is left unchanged.

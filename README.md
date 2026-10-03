@@ -1,9 +1,9 @@
 # EasyPlaceFix
 
-[![Minecraft Version](https://img.shields.io/badge/Minecraft-26.1.2%20%7C%2026.2-brightgreen?style=flat-square&logo=minecraft)](README.md)
+[![Minecraft Version](https://img.shields.io/badge/Minecraft-26.3-brightgreen?style=flat-square&logo=minecraft)](README.md)
 [![Platform](https://img.shields.io/badge/Platform-Fabric-blue?style=flat-square&logo=fabric)](README.md)
 [![Java Target](https://img.shields.io/badge/Java-25-orange?style=flat-square&logo=openjdk)](README.md)
-[![Mod Version](https://img.shields.io/badge/Version-0.6.6-purple?style=flat-square)](README.md)
+[![Mod Version](https://img.shields.io/badge/Version-0.6.7-purple?style=flat-square)](README.md)
 [![Requires](https://img.shields.io/badge/Requires-Litematica%20%2B%20MaLiLib-lightgrey?style=flat-square)](README.md)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
 
@@ -13,7 +13,7 @@ Client-side Fabric mod that makes Litematica Easy Place reliable in multiplayer 
 
 ### Что это
 
-`EasyPlaceFix` (mod id `easyplacefix`) — клиентский Fabric-мод для Minecraft 26.1.2–26.2, повышающий надёжность режима Litematica Easy Place на многопользовательских серверах: исправляет ориентацию блоков, синхронизирует задержки с игровым тикрейтом для обхода ложных срабатываний античитов, автоматически настраивает нотные блоки и выполняет многоэтапные взаимодействия со сложными блоками. Форк проекта [223225zzzkkk/easyplaceFix](https://github.com/223225zzzkkk/easyplaceFix).
+`EasyPlaceFix` (mod id `easyplacefix`) — клиентский Fabric-мод для Minecraft 26.3, повышающий надёжность режима Litematica Easy Place на многопользовательских серверах: исправляет ориентацию блоков, синхронизирует задержки с игровым тикрейтом для обхода ложных срабатываний античитов, автоматически настраивает нотные блоки и выполняет многоэтапные взаимодействия со сложными блоками. Форк проекта [223225zzzkkk/easyplaceFix](https://github.com/223225zzzkkk/easyplaceFix).
 
 ### Возможности
 
@@ -43,25 +43,24 @@ Client-side Fabric mod that makes Litematica Easy Place reliable in multiplayer 
 
 1. **Fabric Loader** `0.19.3+` и **Fabric API**.
 2. Установите **MaLiLib** и **Litematica** (см. таблицу совместимости версий ниже).
-3. Скопируйте `EasyPlaceFix-0.6.6.jar` из `build/libs/` в папку `mods/`.
+3. Скопируйте `EasyPlaceFix-0.6.7.jar` из `build/libs/` в папку `mods/`.
 
 **Совместимость:**
 
 | Minecraft | Litematica | MaLiLib | Fabric API |
 |---|---|---|---|
-| `26.1.2` | `0.27.10` | `0.28.9` | `0.153.0+26.1.2` |
-| `26.2` | `0.28.4` | `0.29.3` | `0.153.0+26.2` |
+| `26.3` | `0.29.1` | `0.30.2` | `0.161.0+26.3` |
 
-**Требования:** Minecraft `26.1.2`–`26.2` (один JAR) · Java `25` · только клиент.
+**Требования:** Minecraft `26.3` (один JAR) · Java `25` · только клиент.
 
 ### Сборка
 
 ```powershell
-.\gradlew.bat clean build                            # 26.1.2 (по умолчанию)
-.\gradlew.bat clean build "-Pminecraft_version=26.2" # проверка на 26.2
+.\gradlew.bat clean build                            # 26.3 (по умолчанию)
+.\gradlew.bat clean build "-Pminecraft_version=26.3" # проверка на 26.3
 ```
 
-Готовый JAR: `build/libs/EasyPlaceFix-0.6.6.jar`.
+Готовый JAR: `build/libs/EasyPlaceFix-0.6.7.jar`.
 
 ---
 
@@ -69,7 +68,7 @@ Client-side Fabric mod that makes Litematica Easy Place reliable in multiplayer 
 
 ### What It Is
 
-`EasyPlaceFix` (mod id `easyplacefix`) is a client-side Fabric mod for Minecraft 26.1.2–26.2 that enhances Litematica Easy Place reliability on multiplayer servers by correcting block orientations, pacing placements to avoid anti-cheat kicks, auto-tuning note blocks, and bridging multi-click interactions. A fork of [223225zzzkkk/easyplaceFix](https://github.com/223225zzzkkk/easyplaceFix).
+`EasyPlaceFix` (mod id `easyplacefix`) is a client-side Fabric mod for Minecraft 26.3 that enhances Litematica Easy Place reliability on multiplayer servers by correcting block orientations, pacing placements to avoid anti-cheat kicks, auto-tuning note blocks, and bridging multi-click interactions. A fork of [223225zzzkkk/easyplaceFix](https://github.com/223225zzzkkk/easyplaceFix).
 
 ### Features
 
@@ -99,23 +98,22 @@ No mod-specific key bindings; it works on top of Litematica's normal Easy Place 
 
 1. **Fabric Loader** `0.19.3+` and **Fabric API**.
 2. Install **MaLiLib** and **Litematica** (see the version matrix below).
-3. Copy `EasyPlaceFix-0.6.6.jar` from `build/libs/` into `mods/`.
+3. Copy `EasyPlaceFix-0.6.7.jar` from `build/libs/` into `mods/`.
 
 | Minecraft | Litematica | MaLiLib | Fabric API |
 |---|---|---|---|
-| `26.1.2` | `0.27.10` | `0.28.9` | `0.153.0+26.1.2` |
-| `26.2` | `0.28.4` | `0.29.3` | `0.153.0+26.2` |
+| `26.3` | `0.29.1` | `0.30.2` | `0.161.0+26.3` |
 
-**Requirements:** Minecraft `26.1.2`–`26.2` (single JAR) · Java `25` · client-only.
+**Requirements:** Minecraft `26.3` (single JAR) · Java `25` · client-only.
 
 ### Building
 
 ```powershell
-.\gradlew.bat clean build                            # 26.1.2 (default)
-.\gradlew.bat clean build "-Pminecraft_version=26.2" # verify against 26.2
+.\gradlew.bat clean build                            # 26.3 (default)
+.\gradlew.bat clean build "-Pminecraft_version=26.3" # verify against 26.3
 ```
 
-Output JAR: `build/libs/EasyPlaceFix-0.6.6.jar`.
+Output JAR: `build/libs/EasyPlaceFix-0.6.7.jar`.
 
 ## Лицензия / License
 
